@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: whitesmoke;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #282c34;
+}
+
+button{
+  font-size: large;
+  font-weight: 400;
+  letter-spacing: .1em;
+  border-radius: .5rem;
+  border: 1px solid whitesmoke;
+}

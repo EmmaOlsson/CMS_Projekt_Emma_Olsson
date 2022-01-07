@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "Movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "movie_title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "release_date": {
+      "type": "date",
+      "required": true
+    },
+    "runtime": {
+      "type": "integer",
+      "required": true,
+      "max": 400
+    },
+    "movie_rating": {
+      "type": "decimal",
+      "required": true,
+      "max": 10,
+      "min": 1
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "inversedBy": "movies"
+    }
+  }
+}

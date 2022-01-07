@@ -1,0 +1,133 @@
+
+/* Landing component */
+
+.mainContainer{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.buttonContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.activeButton{
+  background: whitesmoke;
+  transition-delay: 2s;
+}
+
+.inactiveButton{
+  color: whitesmoke;
+  background: #282c34;
+}
+
+.inactiveButton:hover{
+  background: whitesmoke;
+  color: black;
+}
+
+.buttonContainer button{
+  min-width: 12rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: medium;
+}
+
+
+/* Books and Movies */
+
+.componentContent{
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12rem);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5rem;
+  row-gap: 2rem;
+}
+
+.bookContent, .movieContent {
+  width: 15rem;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  text-align: left;
+  background: whitesmoke;
+  border-radius: .25rem;
+  padding: 2rem 2rem 1rem 2rem;
+  box-shadow: .3rem .3rem .3rem rgba(204, 204, 204, 0.233);
+  animation: fadeIn 1s ease-in both;
+}
+
+.coverContainer{
+  width: 11rem;
+  height: 14.5rem;
+}
+
+.coverImg{
+  z-index: 5;
+  width: inherit;
+  height: inherit;
+}
+
+.bookInfo, .movieInfo{
+  max-width: inherit;
+  padding-top: 1rem;
+}
+
+.bookInfo p, .movieInfo p{
+  line-height: 150%;
+}
+
+.bookInfo p:first-of-type, .movieInfo p:first-of-type{
+  font-weight: bolder;
+}
+
+.genreLabel{
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5rem;
+  flex: 1;
+  gap: .1rem;}
+
+.genreLabel p{
+  width: 6rem;
+  padding: .2rem .8rem;
+  border-radius: .15rem;
+  color: whitesmoke;
+  text-align: center;
+  background-color:#282c3477;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -5%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
