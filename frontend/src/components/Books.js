@@ -18,7 +18,6 @@ export default function Books({ books, style }) {
             </div>
             <div className={style.genreLabel}>
               {genres.data.map(({ attributes }, index) => {
-                console.log("attributes", attributes);
                 let { genre } = attributes;
 
                 return <p key={index}>{genre}</p>;
