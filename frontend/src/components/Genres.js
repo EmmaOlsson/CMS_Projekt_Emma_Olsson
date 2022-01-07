@@ -34,7 +34,7 @@ export default function Genres({ genres }) {
                         : setToggleGenre(genre)
                     }
                   >
-                   {genre}
+                    {genre}
                   </button>
                 </div>
                 {toggleGenre === genre ? (
@@ -52,7 +52,10 @@ export default function Genres({ genres }) {
                           </div>
                           <div className={style.contentType}>
                             <i className="fas fa-film"></i>
-                            <div className={style.contentTypeCutout}/>
+                            <div className={style.contentTypeCutout} />
+                          </div>
+                          <div className={style.genreLabel}>
+                            <p>{genre}</p>
                           </div>
                         </section>
                       );
@@ -71,8 +74,13 @@ export default function Genres({ genres }) {
                           </div>
                           <div className={style.contentType}>
                             <i className="fas fa-book"></i>
-                            <div className={style.contentTypeCutout}/>
+                            <div className={style.contentTypeCutout} />
                           </div>
+                          {
+                            <div className={style.genreLabel}>
+                              <p>{genre}</p>
+                            </div>
+                          }
                         </section>
                       );
                     })}
